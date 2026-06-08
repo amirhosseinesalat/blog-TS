@@ -1,9 +1,10 @@
 import { useState } from "react";
-import BlogCardComponent from "./components/BlogCard.js";
+
 
 import BlogTableComponents from "./components/BlogTables.js";
 import NavBar from "./components/Navbar.js";
 import { IBlog } from "./types/blog.types.js";
+import BlogsList from "./components/BlogList.js";
 function App() {
   const blogsData: IBlog[] = [
     {
@@ -40,7 +41,7 @@ function App() {
         <hr />
         <NavBar></NavBar>
         <BlogTableComponents blogs={blogs} />
-        <BlogCardComponent blogs={blogs} />
+        <BlogsList blogs={blogs} />
       </div>
     </>
   );

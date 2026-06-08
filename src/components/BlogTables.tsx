@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { IPropsBlog } from "../types/blog.types";
+import { PropsBlogs } from "../types/blog.types";
 
-const BlogTableComponent: FC<IPropsBlog> = ({ blogs }) => {
+const BlogTableComponent: FC<PropsBlogs> = ({ blogs }) => {
   return (
     <div className="flex flex-col mt-5">
       <div className="overflow-x-auto">
