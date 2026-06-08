@@ -4,3 +4,6 @@ export interface IBlog {
   text: string;
   author: string;
 }
+export interface IPropsBlog {
+  blogs: IBlog[];
+}

@@ -1,34 +1,7 @@
-import { useState } from "react";
-import { IBlog } from "../types/blog.types";
+import { FC, useState } from "react";
+import { IBlog, IPropsBlog } from "../types/blog.types";
 
-function BlogCardComponent() {
-  const [blog, setBlog] = useState<IBlog[]>([
-    {
-      title: "React Tailwind Card with Grid 1",
-      author: "Erfan gholami",
-      image: "https://picsum.photos/536/354",
-      text: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable text",
-    },
-    {
-      title: "React Tailwind Card with Grid 2",
-      image: "https://picsum.photos/id/237/536/354",
-      author: "amir slt",
-      text: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable text",
-    },
-    {
-      title: "React Tailwind Card with Grid 3",
-      image: "https://picsum.photos/seed/picsum/536/354",
-      author: "dina molavi",
-      text: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable text",
-    },
-    {
-      title: "React Tailwind Card with Grid 4",
-      image: "https://picsum.photos/id/1060/536/354?blur=2",
-      author: "ali farj",
-      text: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable text",
-    },
-  ]);
-
+const BlogCardComponent: FC<IPropsBlog> = ({ blogs }) => {
   return (
     <>
       <div className="w-full shadow-md lg:max-w-sm p-2">
@@ -46,5 +19,5 @@ function BlogCardComponent() {
       </div>
     </>
   );
-}
+};
 export default BlogCardComponent;
